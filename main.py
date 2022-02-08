@@ -45,7 +45,7 @@ f.close()
 if st.button('New Question!'):
     num = random_number()
 
-with st.spinner('Cats is running around...'):
+with st.spinner('Cats are running around...'):
     time.sleep(1)
 
 # print selected question
