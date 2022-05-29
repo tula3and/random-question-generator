@@ -33,7 +33,7 @@ cnt = -1
 questions = []
 for line in rdr:
     cnt += 1
-    if (cnt == 0): continue
+    if (cnt == 0 or len(line) == 0): continue
     temp = []
     temp.append(line[0])
     temp.append(line[1])
