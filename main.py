@@ -14,12 +14,14 @@ st.balloons()
 # set a default language option
 option = st.selectbox(
         'Choose language first',
-        ('한국어', 'English'))
+        ('한국어', 'English', 'Arabic'))
 
 if option == '한국어':
     language = 0
-else:
+elif option == 'English':
     language = 1
+else:
+    language = 2
 
 # choose one number from 0 to 31
 num = random_number()
@@ -34,10 +36,7 @@ questions = []
 for line in rdr:
     cnt += 1
     if (cnt == 0 or len(line) == 0): continue
-    temp = []
-    temp.append(line[0])
-    temp.append(line[1])
-    questions.append(temp)
+    questions.append(line)
 
 f.close()
 
