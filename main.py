@@ -14,14 +14,16 @@ st.balloons()
 # set a default language option
 option = st.selectbox(
         'Choose language first',
-        ('한국어', 'English', 'Arabic'))
+        ('한국어', 'English', 'Arabic', 'Japanese'))
 
 if option == '한국어':
     language = 0
 elif option == 'English':
     language = 1
-else:
+elif option == 'Arabic':
     language = 2
+else:
+    language = 3
 
 # choose one number from 0 to 31
 num = random_number()
