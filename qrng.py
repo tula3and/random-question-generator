@@ -6,7 +6,7 @@ def random_number():
     circuit = QuantumCircuit(qr,cr)
     circuit.h(qr)
 
-    circuit.measure_all()
+    circuit.measure_all(add_bits=False)
 
     backend = Aer.get_backend('qasm_simulator')
     result = execute(circuit, backend, shots=1, memory=True).result()
